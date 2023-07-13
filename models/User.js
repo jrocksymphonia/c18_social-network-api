@@ -6,12 +6,14 @@ const userSchema = new Schema(
     {
         username: {
             type: String,
-
+            // Unique
             required: true,
+            // Trimmed
         },
         email: {
             type: String,
             required: true,
+            // Unique
             match: [/.+@.+\..+/, 'Must match an email address!'],
         },
         thoughts: [thoughtSchema],
