@@ -28,7 +28,7 @@ userSchema
   .set(function (v) {
     const friend = v.split(' ')[0];
     this.set({ friend });
-  });
+});
 
 const User = model('user', userSchema);
 
